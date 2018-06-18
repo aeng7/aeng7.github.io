@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,69 +5,22 @@
     <title>Ooyala Receiver</title>
 
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
-    <!--script src="http://player.ooyala.com/static/v4/production/latest/core.js"></script-->
-    <!--script src="http://xd-team.ooyala.com.s3.amazonaws.com/demo/chromecast/cc_core.js"></script>
-    <script src="http://player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.js"></script>
-    <link rel="stylesheet" href="http://player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.css"/-->
-    <!--script src="http://player.ooyala.com/static/v4/production/latest/video-plugin/main_html5.js"></script-->
-    <!--script src="http://player.ooyala.com/static/v4/production/latest/video-plugin/bit_wrapper.js"></script-->
-    <!--script src="http://player.ooyala.com/static/v4/production/latest/ad-plugin/google_ima.js"></script-->
-
-    <!--script type="text/javascript" src="//player.ooyala.com/core/e48c9b51282d406f957c666149763424?plugins=bm,cast"></script-->
-    <!--script type="text/javascript" src="//xd-team.ooyala.com.s3.amazonaws.com/demo/chromecast/valhalla_cc.js"></script-->
-
     <script type="text/javascript" src="//player.ooyala.com/static/v4/stable/4.20.8/core.min.js"></script>
-
     <script type="text/javascript" src="//player.ooyala.com/static/v4/stable/4.20.8/video-plugin/bit_wrapper.min.js"></script>
-
     <script type="text/javascript" src="//player.ooyala.com/static/v4/stable/4.20.8/skin-plugin/html5-skin.min.js"></script>
     <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.20.8/skin-plugin/html5-skin.min.css">
-
-
-    <!--script src="//xd-team.ooyala.com.s3.amazonaws.com/demo/chromecast/bit_wrapper.js"></script-->
-    <!--script src="//xd-team.ooyala.com.s3.amazonaws.com/demo/chromecast/mjolnir.min.js"></script-->
-    <style>
-    .console-log-div {
-      border: 1px solid gray;
-      padding: 5px 10px;
-      border-radius: 5px;
-      width: 95% !important;
-      background-color: #efefef;
-      overflow: scroll;
-      height:480px;
-    }
-    </style>
-
-
 </head>
 
 <body>
-    <script src="https://rawgit.com/bahmutov/console-log-div/master/console-log-div.js"></script>
-    <script>
-    window.setInterval(function() {
-      var elem = document.getElementById('console-log-div');
-      elem.scrollTop += 120;
-      if(elem.scrollTop > elem.scrollHeight) {
-        elem.scrollTop = elem.scrollHeight;  
-      }
-    }, 750);
-    </script>
-    <div id="splash-screen" class="fbox-container fs" style="width:640px;height:480px">
+    <div id="splash-screen" class="fbox-container fs">
         <img id="splash-image" src="images/logo.svg">
         <div id="status-cast">
         </div>
-        <div style="color:white;">
-            Alex's Page 124
-        </div>
     </div>
-    <div id="player" style="width:320px;height:240px"></div>
+    <div id="player"></div>
     <script type="text/javascript" src="//player.ooyala.com/static/chromecast/staging/cast.min.js"></script>
-    
     <script>
         var pageLevelParams = {
-            playerBrandingId: "e48c9b51282d406f957c666149763424",
-            pcode: "c0cTkxOqALQviQIGAHWY5hP0q9gU",
-                   debug:false,
             skin: {
                 inline: {
                     pauseScreen: {
@@ -81,7 +33,7 @@
                     '*',
                     'cast-sample-app',
                     (event, parameters) => {
-                        // console.log(`Notification about ${event} with the following parameters ${parameters}`);
+                        console.log(`Notification about ${event} with the following parameters ${parameters}`);
                     }
                 )
         };
@@ -91,7 +43,6 @@
             pageLevelParams
         );
     </script>
-
 
 
 </body></html>
