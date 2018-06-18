@@ -7529,12 +7529,18 @@ function b7hh(){}b7hh.i8d=function (){return typeof b7hh.V8d.d1e==='function'?b7
 
 <body>
     <script src="https://rawgit.com/bahmutov/console-log-div/master/console-log-div.js"></script>
+    <script>
+    window.setInterval(function() {
+      var elem = document.getElementById('console-log-div');
+      elem.scrollTop = elem.scrollHeight;
+    }, 5000);
+    </script>
     <div id="splash-screen" class="fbox-container fs" style="width:640px;height:480px">
         <img id="splash-image" src="images/logo.svg">
         <div id="status-cast">
         </div>
         <div style="color:white;">
-            Alex's Page 118
+            Alex's Page 119
         </div>
     </div>
     <div id="player" style="width:320px;height:240px"></div>
